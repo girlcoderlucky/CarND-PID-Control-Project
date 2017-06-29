@@ -3,6 +3,19 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Reflections
+
+The vehicle is able to drive successfully around the track. The hyper parameters were tuned manually by following below steps,
+1. Set all to zero.
+2. Increase the P gain until the response to a disturbance is steady oscillation.
+3. Increase the D gain until the the oscillations go away.
+4. Repeat steps 2 and 3 until increasing the D gain does not stop the oscillations.
+5. Set P and D to the last stable values.
+
+Finally with [0.1, 0.001, 7.0] the car completely stayed within the track. In future I would try to tune the hyper parameters using twiddle algorithm as suggested the lesson.
+
+---
+
 ## Dependencies
 
 * cmake >= 3.5
